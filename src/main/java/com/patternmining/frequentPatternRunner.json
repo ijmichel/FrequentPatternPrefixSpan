@@ -1,0 +1,39 @@
+{
+  "name" : "frequentPatternRunner",
+  "testType" : "SINGLE",
+  "input" : {
+    "type" : "STANDARD",
+    "fileName" : "input.txt"
+  },
+  "output" : {
+    "type" : "STANDARD",
+    "fileName" : "output.txt"
+  },
+  "tests" : [ {
+    "input" : "2\nB A C E D\nA C\nC B D\n",
+    "output" : "3 [C]\n2 [A]\n2 [A C]\n2 [B]\n2 [B C]\n2 [B C D]\n2 [B D]\n2 [C D]\n2 [D]\n\n3 [C]\n2 [A C]\n2 [B C D]\n\n2 [A C]\n2 [B C D]\n",
+    "index" : 0,
+    "active" : true
+  }, {
+    "input" : "2\ndata mining\nfrequent pattern mining\nmining frequent patterns from the transaction dataset\nclosed and maximal pattern mining\n",
+    "output" : "4 [mining]\n2 [frequent]\n2 [frequent mining]\n2 [mining pattern]\n2 [pattern]\n\n4 [mining]\n2 [frequent mining]\n2 [mining pattern]\n\n2 [frequent mining]\n2 [mining pattern]\n",
+    "index" : 1,
+    "active" : true
+  } ],
+  "location" : "src/main/java/com/patternmining",
+  "vmArgs" : "-Xmx512M",
+  "mainClass" : "Main",
+  "taskClass" : "com.patternmining.FrequentPatternRunner",
+  "checkerClass" : "net.egork.chelper.checkers.TokenChecker",
+  "checkerParameters" : "",
+  "testClasses" : [ ],
+  "date" : "2018.10.29",
+  "contestName" : "HackerRank",
+  "truncate" : true,
+  "inputClass" : "java.util.Scanner",
+  "outputClass" : "java.io.PrintWriter",
+  "includeLocale" : false,
+  "failOnOverflow" : false,
+  "interactive" : false,
+  "interactor" : "net.egork.chelper.tester.Interactor"
+}
